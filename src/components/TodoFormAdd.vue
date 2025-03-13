@@ -16,3 +16,9 @@
     </button>
   </form>
 </template>
+
+<script>
+export default {
+  name: "TodoFormAdd",
+};
+</script>
