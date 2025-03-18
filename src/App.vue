@@ -21,14 +21,9 @@ export default {
 
   created() {
     this.loading = true;
-    this.todos = axios
-      .get("http://localhost:3000/todos")
-      .then((response) => {
-        this.$store.commit("storeTodos", response.data);
-      })
-      .finally(() => {
-        this.loading = false;
-      });
+    this.$store.dispatch("getTodos").finally(() => {
+      this.loading = false;
+    });
   },
 };
 </script>
